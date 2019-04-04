@@ -12,9 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/feedbackSubmit")
 public class FeedbackService extends HttpServlet {
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
 
 
