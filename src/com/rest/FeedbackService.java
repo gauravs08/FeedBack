@@ -70,9 +70,7 @@ public class FeedbackService extends HttpServlet {
 				// .target(REST_URI)
 				.request(MediaType.APPLICATION_JSON).post(Entity.entity(fd, MediaType.APPLICATION_JSON));
 	}
-<<<<<<< HEAD
 	public void saveFeedback(Feedback fd) {
-    	// http://localhost:8080/RESTfulExample/json/product/post
 
     		//try {
     			// Just to testt if read is also working
@@ -129,66 +127,6 @@ public class FeedbackService extends HttpServlet {
     		}
  */
 
-=======
-	public void saveFeedback(Feedback fd) {
-    	// http://localhost:8080/RESTfulExample/json/product/post
-
-    		//try {
-    			// Just to testt if read is also working
-    			FeedbackService fs = new FeedbackService();
-    			//List<Feedback> fds = fs.getAllFeedbacksByApi();
-    			
-    		Response res =	fs.submitFeedBackByApi(fd);
-    		if (res.getStatus() != HttpURLConnection.HTTP_CREATED) {
-				throw new RuntimeException("Failed : HTTP error code : "+ res.getStatus());
-			}else {
-				System.out.println("Output from Server .... \n");
-				System.out.println("Feedback Sumbitted successfuly.");
-			}
-/*
-    			ObjectToJSON obj = new ObjectToJSON();
-    			//boolean input = obj.writeFeedbackToJsonFile(fd);
-    			boolean success = obj.appendObjToJSON(fd);
-    			//String input = "{\"message\":some Message,\"email\":\"xyz@abc.com\"}";
-
-    			
-    			URL url = new URL("http://localhost:8080/FeedBack-api/api/json/feedback/post");
-    			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-    			//URLConnection conn = url.openConnection();
-    			conn.setDoOutput(true);
-    			conn.setRequestProperty("Content-Type", "application/json");
-    			//conn.setConnectTimeout(5000);
-    			//conn.setReadTimeout(5000);
-    			
-    			
-    			 * OutputStreamWriter out = new OutputStreamWriter(conn.getOutputStream());
-    			 * out.write(jsonObject.toString()); out.close();
-    			 
-    			
-    			  if (conn.getResponseCode() != 200) { 
-    				  throw new  RuntimeException("Failed : HTTP error code : " + conn.getResponseCode());
-    				  }
-    			 
-
-    			BufferedReader br = new BufferedReader(new InputStreamReader((conn.getInputStream())));
-
-    			String output;
-    			System.out.println("Output from Server .... \n");
-    			while ((output = br.readLine()) != null) {
-
-    				System.out.println(output);
-    			}
-    			br.close();
-    			conn.disconnect();
-    		} catch (MalformedURLException e) {
-
-    			e.printStackTrace();
-    		} catch (IOException e) {
-    			e.printStackTrace();
-    		}
- */
-
->>>>>>> branch 'master' of https://github.com/gauravs08/FeedBack.git
     }
 
 	public void getAllFeedback() {
