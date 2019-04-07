@@ -10,7 +10,6 @@
 
 <form method="post" action="feedbackSubmit">
 	<label for="Email">Email</label> <input type="text" name="email" /> <br />
-	</br>
 	<label for="message">Message</label>
 	<textarea name="message"></textarea>
 	<input type="submit" value="Send feedback">
